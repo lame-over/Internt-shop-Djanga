@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
 </head>
 <body>
-    {% include 'main/footer.html' %}
+    <a href="{% url 'about' %}">{% include 'main/footer.html' %}</a>
     {% block content %}
     {% endblock %}
 </body>
