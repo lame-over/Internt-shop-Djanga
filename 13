@@ -1,0 +1,28 @@
+CREATE TABLE `user` (`id` int(5) unsigned NOT NULL AUTO_INCREMENT,
+                    `name` varchar(30) DEFAULT NOT NULL,
+                    `surname` varchar(30) DEFAULT NULL,
+                    `patronymic` varchar(30) DEFAULT NULL,
+                    `phone` varchar(10) DEFAULT NULL,
+                    `email` varchar(100) NOT NULL,
+                    `password` varchar(20) NOT NULL,
+                    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `categories` (`id` int(5) unsigned NOT NULL AUTO_INCREMENT,
+                    `name` varchar(30) DEFAULT NOT NULL,
+                    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `goods` (`id` int(20) unsigned NOT NULL AUTO_INCREMENT,
+                     `name` varchar(30) DEFAULT NOT NULL,
+                     `price` int(5) unsigned NOT NULL,
+                     `description` varchar(30) DEFAULT NULL,
+                     `rating` int(1) DEFAULT NULL,
+                     PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `seller` (`id` int(5) unsigned NOT NULL AUTO_INCREMENT,
+                    `name` varchar(30) DEFAULT NOT NULL,
+                    `description` varchar(30) DEFAULT NULL,
+                    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
